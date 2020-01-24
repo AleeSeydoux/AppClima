@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './componentes/Header';
-
+import Formulario from './componentes/Formulario';
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Header
         titulo = 'Clima React'
       />
+      <Formulario/>
     </div>
   );
 }
