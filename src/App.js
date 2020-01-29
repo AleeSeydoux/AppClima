@@ -4,8 +4,24 @@ import Formulario from './componentes/Formulario';
 
 class App extends Component {
 
+  state = {
+    error: ''
+  }
+
+  componentDidMount(){
+    this.setState({
+      error: false
+    })
+  }
+
   datosConsulta = respuesta => {
-    console.log(respuesta); 
+    if(respuesta.ciudad === '' || respuesta.pais === ''){
+      this.setState({
+        error: true
+      })
+    } else {
+      console.log('todo correcto');
+    }
   }
 
   render(){
