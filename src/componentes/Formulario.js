@@ -16,7 +16,7 @@ paisRef = React.createRef();
         }
 
         //enviar por props
-
+        this.props.datosConsulta(respuesta);
 
         //opcional: resetear el form
     }
