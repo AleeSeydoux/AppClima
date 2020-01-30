@@ -6,7 +6,12 @@ import Error from './componentes/Error';
 class App extends Component {
 
   state = {
-    error: ''
+    error: '',
+    consulta : {}
+  }
+
+  componentDidUpdate(){
+    this.consultarApi();
   }
 
   componentDidMount(){
@@ -15,13 +20,27 @@ class App extends Component {
     })
   }
 
+  consultarApi = () => {
+    const {ciudad, pais} = this.state.consulta;
+    if(!ciudad || !pais) return null;
+
+    //query con fetch api
+
+    //leer url y agregar apikey
+
+    //consultar con fetch
+
+  }
+
   datosConsulta = respuesta => {
     if(respuesta.ciudad === '' || respuesta.pais === ''){
       this.setState({
         error: true
       })
     } else {
-      console.log('todo correcto');
+      this.setState({
+        consulta: respuesta
+      })
     }
   }
 
