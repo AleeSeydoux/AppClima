@@ -24,6 +24,10 @@ class App extends Component {
     const {ciudad, pais} = this.state.consulta;
     if(!ciudad || !pais) return null;
 
+    const apiId = '85c8a72c111897098c90959f8d5a1015';
+    let url = `http://api.openweathermap.org/data/2.5/forecast?q=${ciudad},${pais}&APPID=${apiId}`;
+
+    console.log(url);
     //query con fetch api
 
     //leer url y agregar apikey
