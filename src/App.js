@@ -71,7 +71,7 @@ class App extends Component {
     if(error){
       resultado = <Error mensaje= "Ambos campos son obligatorios"/>
     } else {
-      resultado = <Clima/>
+      resultado = <Clima resultado = {this.state.resultado}/>
     }
 
     return (
