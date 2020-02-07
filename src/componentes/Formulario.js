@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class Formulario extends Component {
 
@@ -57,6 +58,9 @@ paisRef = React.createRef();
             </div>
          );
     }
+}
+Formulario.propTypes = {
+    datosConsulta: PropTypes.func.isRequired
 }
  
 export default Formulario;
