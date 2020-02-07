@@ -10,6 +10,9 @@ class Clima extends Component {
 
         const kelvin = 273.15;
 
+        const urlIcon = `http://openweathermap.org/img/wn/${weather[0].icon}.png`;
+        const alt = `clima de ${name}`;
+
         return(
             <div className="row">
                 <div className="resultado col s12 m8 l6 offset-m2 offset-133">
@@ -18,6 +21,7 @@ class Clima extends Component {
         <h2>Resultado Clima de: {name}</h2>
         <p className="temperatura">
             Actual: {(main.temp - kelvin).toFixed(2)} &deg;C
+            <img src={} alt={alt} />
         </p>
                         </span>
                     </div>
@@ -29,7 +33,7 @@ class Clima extends Component {
     }
 
     render() { 
-        console.log(this.props.resultado);
+ 
         return ( 
             <div className="container">
                 {this.mostrarResultado()}
